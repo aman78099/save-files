@@ -1,0 +1,16 @@
+SELECT
+    Orders.order_id,
+    Users.name,
+    Products.product_name,
+    Products.product_type,
+    Order_Items.quantity,
+    Order_Items.purchase_price,
+    Orders.total_price,
+    Orders.order_date
+FROM Orders
+JOIN Users
+ON Orders.user_id = Users.user_id
+JOIN Order_Items
+ON Orders.order_id = Order_Items.order_id
+JOIN Products
+ON Order_Items.product_id = Products.product_id
