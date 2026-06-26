@@ -1,0 +1,7 @@
+SELECT
+    p.product_id,
+    p.product_name,
+    p.product_type,
+    p.price
+FROM Products AS p
+ORDER BY p.product_id
