@@ -1,0 +1,6 @@
+SELECT
+    Users.name,
+    User_Sessions.login_times
+FROM Users
+JOIN User_Sessions
+ON Users.user_id = User_Sessions.user_id
